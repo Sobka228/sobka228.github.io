@@ -52,7 +52,7 @@ body
 }
 #ThemeableButton1 .ui-secondary
 {
-   background: url('data:image/svg+xml,%3csvg%20style%3d%22fill:%233F3731%22%20viewBox%3d%220%200%2052%2052%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%0d%0a%20%20%20%3cpath%20d%3d%22M26%201%20C21%201%2c%2017%202%2c%2013%204%20L13%204%20C9%207%2c%206%2010%2c%204%2013%20L4%2013%20C2%2017%2c%201%2021%2c%201%2026%20C1%2031%2c%202%2035%2c%204%2039%20C6%2042%2c%209%2046%2c%2013%2048%20C17%2050%2c%2021%2051%2c%2026%2051%20C31%2051%2c%2035%2050%2c%2039%2048%20C42%2046%2c%2045%2042%2c%2048%2039%20C50%2035%2c%2051%2031%2c%2051%2026%20C51%2021%2c%2050%2017%2c%2048%2013%20C45%2010%2c%2042%207%2c%2039%204%20C35%202%2c%2031%201%2c%2026%201%20Z%20M38%2018%20C37%2019%2c%2037%2021%2c%2037%2023%20L37%2023%20C36%2026%2c%2036%2028%2c%2036%2030%20L36%2030%20C35%2033%2c%2035%2034%2c%2035%2036%20C34%2038%2c%2034%2039%2c%2033%2039%20C32%2039%2c%2031%2038%2c%2030%2037%20C30%2037%2c%2029%2037%2c%2029%2037%20C28%2036%2c%2027%2035%2c%2026%2035%20C25%2034%2c%2024%2034%2c%2023%2033%20C22%2032%2c%2022%2032%2c%2022%2031%20C22%2031%2c%2023%2030%2c%2023%2030%20C24%2029%2c%2024%2029%2c%2024%2029%20C24%2029%2c%2024%2028%2c%2025%2028%20C26%2027%2c%2027%2026%2c%2029%2024%20C30%2023%2c%2031%2022%2c%2031%2022%20C31%2022%2c%2031%2022%2c%2031%2022%20C31%2022%2c%2030%2022%2c%2030%2022%20C30%2022%2c%2026%2024%2c%2020%2029%20C19%2029%2c%2018%2030%2c%2017%2030%20C16%2030%2c%2016%2030%2c%2015%2029%20C14%2029%2c%2014%2029%2c%2013%2029%20C13%2029%2c%2013%2029%2c%2012%2029%20C11%2028%2c%2010%2028%2c%2010%2027%20C10%2027%2c%2011%2026%2c%2012%2026%20C19%2023%2c%2024%2020%2c%2027%2019%20C30%2018%2c%2032%2017%2c%2034%2017%20C35%2016%2c%2036%2016%2c%2036%2016%20C36%2016%2c%2037%2016%2c%2037%2016%20C37%2016%2c%2037%2017%2c%2038%2017%20C38%2017%2c%2038%2018%2c%2038%2018%22/%3e%0d%0a%3c/svg%3e%0d%0a') no-repeat center center;
+   background: url('data:image/svg+xml,%3csvg%20style%3d%22fill:%230020C0%22%20viewBox%3d%220%200%2052%2052%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%0d%0a%20%20%20%3cpath%20d%3d%22M26%201%20C21%201%2c%2017%202%2c%2013%204%20L13%204%20C9%207%2c%206%2010%2c%204%2013%20L4%2013%20C2%2017%2c%201%2021%2c%201%2026%20C1%2031%2c%202%2035%2c%204%2039%20C6%2042%2c%209%2046%2c%2013%2048%20C17%2050%2c%2021%2051%2c%2026%2051%20C31%2051%2c%2035%2050%2c%2039%2048%20C42%2046%2c%2045%2042%2c%2048%2039%20C50%2035%2c%2051%2031%2c%2051%2026%20C51%2021%2c%2050%2017%2c%2048%2013%20C45%2010%2c%2042%207%2c%2039%204%20C35%202%2c%2031%201%2c%2026%201%20Z%20M38%2018%20C37%2019%2c%2037%2021%2c%2037%2023%20L37%2023%20C36%2026%2c%2036%2028%2c%2036%2030%20L36%2030%20C35%2033%2c%2035%2034%2c%2035%2036%20C34%2038%2c%2034%2039%2c%2033%2039%20C32%2039%2c%2031%2038%2c%2030%2037%20C30%2037%2c%2029%2037%2c%2029%2037%20C28%2036%2c%2027%2035%2c%2026%2035%20C25%2034%2c%2024%2034%2c%2023%2033%20C22%2032%2c%2022%2032%2c%2022%2031%20C22%2031%2c%2023%2030%2c%2023%2030%20C24%2029%2c%2024%2029%2c%2024%2029%20C24%2029%2c%2024%2028%2c%2025%2028%20C26%2027%2c%2027%2026%2c%2029%2024%20C30%2023%2c%2031%2022%2c%2031%2022%20C31%2022%2c%2031%2022%2c%2031%2022%20C31%2022%2c%2030%2022%2c%2030%2022%20C30%2022%2c%2026%2024%2c%2020%2029%20C19%2029%2c%2018%2030%2c%2017%2030%20C16%2030%2c%2016%2030%2c%2015%2029%20C14%2029%2c%2014%2029%2c%2013%2029%20C13%2029%2c%2013%2029%2c%2012%2029%20C11%2028%2c%2010%2028%2c%2010%2027%20C10%2027%2c%2011%2026%2c%2012%2026%20C19%2023%2c%2024%2020%2c%2027%2019%20C30%2018%2c%2032%2017%2c%2034%2017%20C35%2016%2c%2036%2016%2c%2036%2016%20C36%2016%2c%2037%2016%2c%2037%2016%20C37%2016%2c%2037%2017%2c%2038%2017%20C38%2017%2c%2038%2018%2c%2038%2018%22/%3e%0d%0a%3c/svg%3e%0d%0a') no-repeat center center;
    display: inline-block;
    overflow: visible;
    margin-left: 10px;
@@ -80,9 +80,8 @@ body
 }
 #ThemeableButton1.ui-button
 {
-   background-color: #EDE4D4;
-   background-image: none;
-   border: 1px solid #CDC3B7;
+   background-image: linear-gradient(to top, #FCEABB 0%, #FCCD4D 50%, #F8B500 51%, #FBDF93 100%);
+   border: 1px solid #FFD700;
    color: #3F3731;
 }
 #ThemeableButton1.ui-state-hover, #ThemeableButton1.ui-button:hover
@@ -124,7 +123,7 @@ body
 }
 #ThemeableButton2 .ui-secondary
 {
-   background: url('data:image/svg+xml,%3csvg%20style%3d%22fill:%233F3731%22%20viewBox%3d%220%200%2052%2052%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%0d%0a%20%20%20%3cpath%20d%3d%22M23%2021%20L32%2026%20L23%2031%20L23%2021Z%20%20M49%208%20L49%2044%20C49%2045%2c%2049%2046%2c%2048%2047%20C47%2048%2c%2046%2049%2c%2044%2049%20L9%2049%20C7%2049%2c%206%2048%2c%205%2047%20C4%2046%2c%204%2045%2c%204%2044%20L4%208%20C4%207%2c%204%206%2c%205%205%20C6%204%2c%207%203%2c%209%203%20L44%203%20C46%203%2c%2047%204%2c%2048%205%20C49%206%2c%2049%207%2c%2049%208%20Z%20M45%2026%20C45%2026%2c%2045%2025%2c%2045%2023%20L45%2023%20C45%2021%2c%2044%2019%2c%2044%2017%20C44%2015%2c%2043%2014%2c%2041%2014%20C40%2014%2c%2038%2013%2c%2036%2013%20C34%2013%2c%2031%2013%2c%2030%2013%20C28%2013%2c%2027%2013%2c%2026%2013%20C26%2013%2c%2025%2013%2c%2023%2013%20C21%2013%2c%2019%2013%2c%2017%2013%20C15%2013%2c%2013%2014%2c%2012%2014%20C10%2014%2c%209%2015%2c%209%2017%20C8%2019%2c%208%2021%2c%208%2023%20C8%2025%2c%208%2026%2c%208%2026%20C8%2026%2c%208%2026%2c%208%2026%20C8%2026%2c%208%2027%2c%208%2029%20C8%2031%2c%208%2033%2c%209%2035%20C9%2037%2c%2010%2038%2c%2012%2038%20C13%2038%2c%2015%2039%2c%2017%2039%20C19%2039%2c%2021%2039%2c%2023%2039%20C25%2039%2c%2026%2039%2c%2026%2039%20C27%2039%2c%2028%2039%2c%2030%2039%20C31%2039%2c%2034%2039%2c%2036%2039%20C38%2039%2c%2040%2038%2c%2041%2038%20C43%2038%2c%2044%2037%2c%2044%2035%20C44%2033%2c%2045%2031%2c%2045%2029%20C45%2027%2c%2045%2026%2c%2045%2026%22/%3e%0d%0a%3c/svg%3e%0d%0a') no-repeat center center;
+   background: url('data:image/svg+xml,%3csvg%20style%3d%22fill:%23FF0000%22%20viewBox%3d%220%200%2052%2052%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%0d%0a%20%20%20%3cpath%20d%3d%22M23%2021%20L32%2026%20L23%2031%20L23%2021Z%20%20M49%208%20L49%2044%20C49%2045%2c%2049%2046%2c%2048%2047%20C47%2048%2c%2046%2049%2c%2044%2049%20L9%2049%20C7%2049%2c%206%2048%2c%205%2047%20C4%2046%2c%204%2045%2c%204%2044%20L4%208%20C4%207%2c%204%206%2c%205%205%20C6%204%2c%207%203%2c%209%203%20L44%203%20C46%203%2c%2047%204%2c%2048%205%20C49%206%2c%2049%207%2c%2049%208%20Z%20M45%2026%20C45%2026%2c%2045%2025%2c%2045%2023%20L45%2023%20C45%2021%2c%2044%2019%2c%2044%2017%20C44%2015%2c%2043%2014%2c%2041%2014%20C40%2014%2c%2038%2013%2c%2036%2013%20C34%2013%2c%2031%2013%2c%2030%2013%20C28%2013%2c%2027%2013%2c%2026%2013%20C26%2013%2c%2025%2013%2c%2023%2013%20C21%2013%2c%2019%2013%2c%2017%2013%20C15%2013%2c%2013%2014%2c%2012%2014%20C10%2014%2c%209%2015%2c%209%2017%20C8%2019%2c%208%2021%2c%208%2023%20C8%2025%2c%208%2026%2c%208%2026%20C8%2026%2c%208%2026%2c%208%2026%20C8%2026%2c%208%2027%2c%208%2029%20C8%2031%2c%208%2033%2c%209%2035%20C9%2037%2c%2010%2038%2c%2012%2038%20C13%2038%2c%2015%2039%2c%2017%2039%20C19%2039%2c%2021%2039%2c%2023%2039%20C25%2039%2c%2026%2039%2c%2026%2039%20C27%2039%2c%2028%2039%2c%2030%2039%20C31%2039%2c%2034%2039%2c%2036%2039%20C38%2039%2c%2040%2038%2c%2041%2038%20C43%2038%2c%2044%2037%2c%2044%2035%20C44%2033%2c%2045%2031%2c%2045%2029%20C45%2027%2c%2045%2026%2c%2045%2026%22/%3e%0d%0a%3c/svg%3e%0d%0a') no-repeat center center;
    display: inline-block;
    overflow: visible;
    margin-left: 10px;
@@ -152,9 +151,8 @@ body
 }
 #ThemeableButton2.ui-button
 {
-   background-color: #EDE4D4;
-   background-image: none;
-   border: 1px solid #CDC3B7;
+   background-image: linear-gradient(to top, #FCEABB 0%, #FCCD4D 50%, #F8B500 51%, #FBDF93 100%);
+   border: 1px solid #FFA500;
    color: #3F3731;
 }
 #ThemeableButton2.ui-state-hover, #ThemeableButton2.ui-button:hover
@@ -170,4 +168,316 @@ body
    background-color: #F4F0EC;
    background-image: none;
    color: #B85700;
+}
+#ThemeableButton3
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   display: inline-block;
+   position: relative;
+   vertical-align: middle;
+   user-select: none;
+   overflow: visible;
+   text-decoration: none;
+   cursor: pointer;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+   vertical-align: top;
+}
+#ThemeableButton3 .ui-button
+{
+   position: absolute;
+   padding: 0;
+}
+#ThemeableButton3 .ui-secondary
+{
+   background: url('data:image/svg+xml,%3csvg%20style%3d%22fill:%23FF0000%22%20viewBox%3d%220%200%2052%2052%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%0d%0a%20%20%20%3cpath%20d%3d%22M51%2027%20C51%2034%2c%2049%2040%2c%2045%2044%20L45%2044%20C40%2049%2c%2034%2051%2c%2027%2051%20C22%2051%2c%2018%2050%2c%2014%2048%20C10%2046%2c%207%2042%2c%205%2039%20C3%2035%2c%202%2031%2c%202%2026%20C2%2021%2c%203%2017%2c%205%2013%20C7%2010%2c%2010%207%2c%2014%204%20C18%202%2c%2022%201%2c%2027%201%20C34%201%2c%2039%203%2c%2044%207%20L37%2014%20C34%2011%2c%2030%2010%2c%2026%2010%20C22%2010%2c%2019%2012%2c%2016%2015%20C13%2017%2c%2011%2021%2c%2011%2026%20C11%2031%2c%2013%2034%2c%2016%2037%20C19%2040%2c%2022%2042%2c%2027%2042%20C30%2042%2c%2033%2041%2c%2035%2040%20C37%2039%2c%2038%2037%2c%2039%2036%20C40%2034%2c%2041%2032%2c%2041%2031%20L27%2031%20L27%2022%20L51%2022%20C51%2024%2c%2051%2025%2c%2051%2027%22/%3e%0d%0a%3c/svg%3e%0d%0a') no-repeat center center;
+   display: inline-block;
+   overflow: visible;
+   margin-left: 10px;
+   vertical-align: middle;
+   width: 13px;
+   height: 13px;
+}
+#ThemeableButton3:hover .ui-secondary
+{
+   background: url('data:image/svg+xml,%3csvg%20style%3d%22fill:%23A46313%22%20viewBox%3d%220%200%2052%2052%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%0d%0a%20%20%20%3cpath%20d%3d%22M51%2027%20C51%2034%2c%2049%2040%2c%2045%2044%20L45%2044%20C40%2049%2c%2034%2051%2c%2027%2051%20C22%2051%2c%2018%2050%2c%2014%2048%20C10%2046%2c%207%2042%2c%205%2039%20C3%2035%2c%202%2031%2c%202%2026%20C2%2021%2c%203%2017%2c%205%2013%20C7%2010%2c%2010%207%2c%2014%204%20C18%202%2c%2022%201%2c%2027%201%20C34%201%2c%2039%203%2c%2044%207%20L37%2014%20C34%2011%2c%2030%2010%2c%2026%2010%20C22%2010%2c%2019%2012%2c%2016%2015%20C13%2017%2c%2011%2021%2c%2011%2026%20C11%2031%2c%2013%2034%2c%2016%2037%20C19%2040%2c%2022%2042%2c%2027%2042%20C30%2042%2c%2033%2041%2c%2035%2040%20C37%2039%2c%2038%2037%2c%2039%2036%20C40%2034%2c%2041%2032%2c%2041%2031%20L27%2031%20L27%2022%20L51%2022%20C51%2024%2c%2051%2025%2c%2051%2027%22/%3e%0d%0a%3c/svg%3e%0d%0a') no-repeat center center;
+}
+#ThemeableButton3:active .ui-secondary
+{
+   background: url('data:image/svg+xml,%3csvg%20style%3d%22fill:%23B85700%22%20viewBox%3d%220%200%2052%2052%22%20version%3d%221.1%22%20xmlns%3d%22http://www.w3.org/2000/svg%22%3e%0d%0a%20%20%20%3cpath%20d%3d%22M51%2027%20C51%2034%2c%2049%2040%2c%2045%2044%20L45%2044%20C40%2049%2c%2034%2051%2c%2027%2051%20C22%2051%2c%2018%2050%2c%2014%2048%20C10%2046%2c%207%2042%2c%205%2039%20C3%2035%2c%202%2031%2c%202%2026%20C2%2021%2c%203%2017%2c%205%2013%20C7%2010%2c%2010%207%2c%2014%204%20C18%202%2c%2022%201%2c%2027%201%20C34%201%2c%2039%203%2c%2044%207%20L37%2014%20C34%2011%2c%2030%2010%2c%2026%2010%20C22%2010%2c%2019%2012%2c%2016%2015%20C13%2017%2c%2011%2021%2c%2011%2026%20C11%2031%2c%2013%2034%2c%2016%2037%20C19%2040%2c%2022%2042%2c%2027%2042%20C30%2042%2c%2033%2041%2c%2035%2040%20C37%2039%2c%2038%2037%2c%2039%2036%20C40%2034%2c%2041%2032%2c%2041%2031%20L27%2031%20L27%2022%20L51%2022%20C51%2024%2c%2051%2025%2c%2051%2027%22/%3e%0d%0a%3c/svg%3e%0d%0a') no-repeat center center;
+}
+#ThemeableButton3.ui-corner-all
+{
+   border-bottom-left-radius: 0px;
+   border-top-left-radius: 0px;
+}
+#ThemeableButton3.ui-corner-all
+{
+   border-bottom-right-radius: 0px;
+   border-top-right-radius: 0px;
+}
+#ThemeableButton3.ui-button
+{
+   background-image: linear-gradient(to top, #FCEABB 0%, #FCCD4D 50%, #F8B500 51%, #FBDF93 100%);
+   border: 1px solid #FFA500;
+   color: #3F3731;
+}
+#ThemeableButton3.ui-state-hover, #ThemeableButton3.ui-button:hover
+{
+   border-color: #F5AD66;
+   background-color: #F5F0E5;
+   background-image: none;
+   color: #A46313;
+}
+#ThemeableButton3.ui-state-active, #ThemeableButton3.ui-button:active
+{
+   border-color: #E0CFC2;
+   background-color: #F4F0EC;
+   background-image: none;
+   color: #B85700;
+}
+#Toast1 
+{
+   background-image: linear-gradient(to top, #FFFFFF 0%, #FFFFFF 25%, #00C0FF 50%, #1052A8 75%, #1052A8 100%);
+   border: 1px solid #C0C0C0;
+   border-radius: 4px;
+   text-align: left;
+   box-shadow: 0px 4px 11px rgba(0,0,0,0.13);
+   animation: animate-background 1000ms linear 0ms infinite normal both;
+}
+#Toast1
+{
+   color: #000000;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 16px;
+   line-height: 18px;
+}
+#Toast1 p, #Toast1 ul
+{
+   margin: 0;
+   padding: 0;
+}
+#Toast1:hover
+{
+   background-color: #FFFFFF;
+   transition: background-color 500ms linear 0ms;
+}
+#toasts
+{
+   left: 0;
+   pointer-events: none;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 999999;
+}
+.toast *
+{
+   box-sizing: border-box;
+}
+.toast.showing 
+{
+   opacity: 1;
+}
+.toast
+{
+   background-clip: padding-box;
+   margin-left: auto;
+   margin-right: 0;
+   opacity: 0;
+   overflow: hidden;
+   pointer-events: auto;
+   transition: opacity .15s linear;
+}
+.toast.show
+{
+   display: block;
+   opacity: 1;
+}
+.toast.hide
+{
+   display: none;
+}
+.toast strong
+{
+   font-weight: bolder;
+   margin-right: auto;
+}
+.toast small
+{
+   font-size: 80%;
+   font-weight: 400;
+}
+.toast .close
+{
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background-color: transparent;
+   border: 0;
+   color: #C0C0C0;
+   cursor: pointer;
+   float: right;
+   font-size: 150%;
+   font-weight: 700;
+   line-height: 1;
+   margin-left: 0.5rem;
+   opacity: 0.5;
+   padding: 0;
+   text-shadow: 0px 1px 0px #fff;
+}
+.toast p, .toast ul
+{
+   margin: 0;
+   padding: 0;
+}
+#Toast1
+{
+   margin-bottom: 12px !important;
+   text-align: left;
+   width: 236px;
+   animation: animate-background 1000ms linear 0ms infinite normal both;
+}
+#Toast1 .toast-header
+{
+   align-items: center;
+   background-clip: padding-box;
+   display: flex;
+   border-bottom: 1px solid rgba(0,0,0,0.06);
+   background-color: rgba(255,255,255,0.50);
+   color: #6C757D;
+   font-family: "Arial Black";
+   font-weight: bold;
+   font-size: 15px;
+   font-style: normal;
+   padding: 10px 12px 10px 12px;
+}
+#Toast1 .toast-body
+{
+   padding: 10px 10px 10px 10px;
+}
+#Toast1 i
+{
+   color: #000000;
+   font-size: 15px;
+   margin-right: 10px;
+   width: 15px;
+}
+#Toast1:hover
+{
+   background-color: #FFFFFF;
+   transition: background-color 500ms linear 0ms;
+}
+#wb_PanelMenu1 a, #PanelMenu1_markup li a
+{
+   display: block;
+   text-align: center;
+   vertical-align: middle;
+}
+#PanelMenu1_markup
+{
+   display: none;
+   margin: 0;
+   padding: 0;
+}
+#PanelMenu1_panel #PanelMenu1_markup
+{
+   display: block;
+}
+#PanelMenu1_markup ul
+{
+   list-style: none;
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#PanelMenu1_markup li a, #PanelMenu1_markup li a:hover
+{
+   padding: 10px 10px 10px 10px;
+   box-shadow: none;
+}
+#PanelMenu1_markup .divider
+{
+   height: 1px;
+   margin: 9px 0;
+   overflow: hidden;
+   background-color: #87CEEB;
+}
+#PanelMenu1_panel
+{
+   display: none;
+   position: fixed;
+   top: 0;
+   height: 100%;
+   width: 250px;
+   z-index: 9999;
+}
+#PanelMenu1_markup li a
+{
+   color: #000080;
+   border: 0px solid #87CEEB;
+   background-color: #4892F7;
+   background-image: linear-gradient(to top, #4892F7 0%, #4386F2 14%, #3980F4 84%, #316FE8 100%);
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   text-decoration: none;
+   text-transform: none;
+}
+#wb_PanelMenu1 a
+{
+   color: #0000FF;
+   border: 1px solid #1E90FF;
+   border-radius: 0px;
+   background-color: #87CEEB;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   font-style: normal;
+   text-decoration: none;
+   text-align: center;
+   text-transform: none;
+}
+#PanelMenu1_markup li a:hover
+{
+   color: #4169E1;
+   background-color: #4892F7;
+   background-image: linear-gradient(to top, #4892F7 0%, #4386F2 14%, #3980F4 84%, #316FE8 100%);
+   border: 0px solid #87CEEB;
+}
+#PanelMenu1_markup li a .icon
+{
+   fill: currentColor;
+   width: 16px;
+   height: 16px;
+   vertical-align: middle;
+}
+#PanelMenu1_markup li a:hover .icon
+{
+   fill: currentColor;
+}
+#wb_PanelMenu1 a:hover
+{
+   color: #000080;
+   background-color: #87CEFA;
+   border: 1px solid #4169E1;
+}
+#PanelMenu1_panel
+{
+   background-color: #EDE4D4;
+   overflow-y: auto;
+}
+#PanelMenu1
+{
+   line-height: 25px;
+   width: 129px;
+   height: 25px;
+   position: absolute;
+   z-index: 999;
 }
