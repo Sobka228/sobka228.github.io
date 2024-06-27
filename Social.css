@@ -1,0 +1,154 @@
+body
+{
+   background-color: #056F5A;
+   background-image: url('images/Social_bkgrnd.png');
+   background-repeat: repeat-y;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#ClipArt1
+{
+   border-width: 0;
+   vertical-align: top;
+}
+#wb_Image1
+{
+   vertical-align: top;
+}
+#Image1
+{
+   border: 0px solid #000000;
+   border-radius: 0px;
+   padding: 0;
+   filter: drop-shadow(0px 3px 10px rgba(0,0,0,1.00));
+   margin: 0;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#wb_Icon1
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   border-radius: 0px;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   vertical-align: top;
+}
+#wb_Icon1 a::after
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1;
+   pointer-events: auto;
+   content: "";
+}
+#Icon1
+{
+   height: 161px;
+   width: 162px;
+}
+#Icon1 i
+{
+   color: #00BFFF;
+   display: inline-block;
+   font-size: 161px;
+   line-height: 161px;
+   vertical-align: middle;
+   width: 160px;
+}
+#wb_Icon1:hover #Icon1 i
+{
+   color: #00BFFF;
+}
+#wb_Icon2
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   border-radius: 0px;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   vertical-align: top;
+}
+#wb_Icon2 a::after
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1;
+   pointer-events: auto;
+   content: "";
+}
+#Icon2
+{
+   height: 161px;
+   width: 162px;
+}
+#Icon2 i
+{
+   color: #FF0000;
+   display: inline-block;
+   font-size: 161px;
+   line-height: 161px;
+   vertical-align: middle;
+   width: 160px;
+}
+#wb_Icon2:hover #Icon2 i
+{
+   color: #FF0000;
+}
+#wb_Icon3
+{
+   background-color: transparent;
+   background-image: none;
+   border: 0px solid #245580;
+   border-radius: 0px;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   vertical-align: top;
+}
+#wb_Icon3 a::after
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1;
+   pointer-events: auto;
+   content: "";
+}
+#Icon3
+{
+   height: 161px;
+   width: 162px;
+}
+#Icon3 i
+{
+   color: #F5FFFA;
+   display: inline-block;
+   font-size: 161px;
+   line-height: 161px;
+   vertical-align: middle;
+   width: 160px;
+}
+#wb_Icon3:hover #Icon3 i
+{
+   color: #F5FFFA;
+}
