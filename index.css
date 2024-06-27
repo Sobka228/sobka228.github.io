@@ -148,3 +148,23 @@ body
    width: 100%;
    height: 100%;
 }
+#Button1
+{
+   border: 1px solid #CDC3B7;
+   border-radius: 4px;
+   background-color: #EDE4D4;
+   background-image: none;
+   color: #3F3731;
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   font-size: 13px;
+   padding: 1px 6px 1px 6px;
+   text-align: center;
+   -webkit-appearance: none;
+   margin: 0;
+}
+#Button1:focus
+{
+   outline: 0;
+}
