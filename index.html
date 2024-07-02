@@ -61,11 +61,11 @@ $(document).ready(function()
 <span style="color:#000000;font-family:'Comic Sans MS';font-size:24px;"><strong><a href="https://sites.google.com/view/bogdan2014com/%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">[Старый Сайт]</a></strong></span></div>
 <div id="wb_Text5" style="position:absolute;left:1256px;top:696px;width:238px;height:74px;z-index:24;">
 <span style="color:#FFFFFF;font-family:'Comic Sans MS';font-size:13px;">ЕСЛИ У ЮЗЕРОВ ЯНДЕКСА ИЛИ SAFARI НЕ РАБОТАЕТ SHOUTBOX ТО ЗАПУСТИТЕ EDGE ЛИБО ДРУГОЙ БРАУЗЕР</span></div>
-<div id="Tabs1" style="position:absolute;left:444px;top:47px;width:730px;height:791px;z-index:25;">
+<div id="Tabs1" style="position:absolute;left:455px;top:56px;width:719px;height:782px;z-index:25;">
 <ul>
 <li role="presentation"><a href="#tabs1-page-1"><span>Обо мне</span></a></li>
 </ul>
-<div style="height:762px;" id="tabs1-page-1">
+<div style="height:753px;" id="tabs1-page-1">
 <div id="Html5" style="position:absolute;left:368px;top:358px;width:100px;height:35px;z-index:0">
 <a href="http://sobka228.github.io/sobka228/" title="Новости, Блог, Проекты, Приколюхи, ПОБЕГ ОТ СОБКЕ. Заходи к нам!" alt="Новости, Блог, Проекты, Приколюхи, ПОБЕГ ОТ СОБКЕ. Заходи к нам!"><img src="http://sobka228.github.io/sobka228/logo.gif" width="88" height="31" border="0"> </a></div>
 <textarea name="TextArea1" id="TextArea1" style="position:absolute;left:12px;top:280px;width:332px;height:234px;z-index:1;" rows="11" cols="39" disabled spellcheck="false"><a href="http://sobka228.github.io/sobka228/" title="Новости, Блог, Проекты, Приколюхи, ПОБЕГ ОТ СОБКЕ. Заходи к нам!" alt="Новости, Блог, Проекты, Приколюхи, ПОБЕГ ОТ СОБКЕ. Заходи к нам!"><img src="http://sobka228.github.io/sobka228/logo.gif" width="88" height="31" border="0"> </a></textarea>
@@ -80,7 +80,13 @@ $(document).ready(function()
 <div id="wb_Image2" style="position:absolute;left:1092px;top:899px;width:87px;height:35px;z-index:26;">
 <img src="images/FrontPage.gif" loading="lazy" id="Image2" alt="" width="87" height="31"></div>
 
-<div style="z-index:28">
+<div id="wb_JavaScript3" style="position:absolute;left:614px;top:12px;width:410px;height:25px;z-index:28;">
+<script>
+document.write("<div style=\"color:#FFFFFF;font-size:16px;font-family:Comic Sans MS;font-weight:normal;font-style:normal;text-align:left;text-decoration:none\">Последнее обновления сайта: "+document.lastModified+"<\/div>");
+</script>    </div>
+<div id="wb_JavaScript4" style="position:absolute;left:999px;top:864px;width:86px;height:35px;z-index:29;">
+<a href="https://www.youtube.com/@DoggieSus2013" rel="nofollow"><img style="width:75px;height:30px;border-width:0;" alt="Мой Ютуб!" title="Мой Ютуб!" src="logo_youtube.gif"></a></div>
+<div style="z-index:30">
 <script>
 var disabled_message = "";
 document.oncontextmenu = function() 
@@ -105,5 +111,59 @@ document.onmousedown = function md(e)
 }
 </script>
 </div>
+<div style="z-index:31">
+<div id="infobar" style="padding:4px 4px 4px 4px;position:fixed;z-index:999;left:0px;top:-100px;width:100%;border-bottom:1px solid #000000;background-color:#0000CD">
+<a href="javascript:closeInfoBar()"><img src="icon_close.gif" style="width: 14px; height: 14px; float: right; border: 0; margin-right: 5px" /></a>
+<span style="color:#FFFFFF;font-size:16px;font-family:Comic Sans MS;font-weight:normal;font-style:normal;text-decoration:none;padding:0px 0;">КАК ГОВОРИТ СОБКА ЭТОТ САЙТ ЕЩЕ В РАЗРАБАТЫВАЕТСЯ!</span>
+</div>
+<script>
+function showInfoBar()
+{
+   var infobar = document.getElementById("infobar");
+   var top = parseInt(infobar.style.top);
+   if (top < 0)
+   {
+      top += 5;
+      infobar.style.top = top+"px";
+      setTimeout(function(){showInfoBar()}, 50);
+   }
+   else
+   {
+      if (document.all && !window.XMLHttpRequest)
+         infobar.style.setExpression("top", 'document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px" : body.scrollTop+"px"');
+      else
+         infobar.style.top = 0;
+   }
+}
+function closeInfoBar()
+{
+   document.getElementById("infobar").style.display = "none";
+}
+function initInfoBar()
+{
+   var docWidth = 800;
+
+   if (typeof window.innerWidth != 'undefined')
+   {
+      docWidth = window.innerWidth;
+   }
+   else 
+   if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
+   {
+      docWidth = document.documentElement.clientWidth;
+   }
+   else
+   {
+      docWidth = document.getElementsByTagName('body')[0].clientWidth;
+   }
+  // document.getElementById("infobar").style.width = "100%";
+
+   var height = parseInt(document.getElementById("infobar").offsetHeight);
+   document.getElementById("infobar").style.top = height*(-1)+"px";
+   
+   showInfoBar();
+}
+initInfoBar();
+</script></div>
 </body>
 </html>
