@@ -528,6 +528,15 @@ body
    height: 897px;
    z-index: 1;
 }
+#Html6
+{
+   position: absolute;
+   left: 870px;
+   top: 887px;
+   width: 100px;
+   height: 35px;
+   z-index: 43;
+}
 #wb_Image2
 {
    position: absolute;
@@ -1222,6 +1231,15 @@ body
    margin: 0;
    padding: 0;
 }
+#Html6
+{
+   left: 970px;
+   top: 887px;
+   width: 100px;
+   height: 35px;
+   visibility: visible;
+   display: inline;
+}
 }
 @media only screen and (max-width: 1279px)
 {
@@ -1600,5 +1618,14 @@ body
 {
    margin: 0;
    padding: 0;
+}
+#Html6
+{
+   left: 970px;
+   top: 887px;
+   width: 100px;
+   height: 35px;
+   visibility: visible;
+   display: inline;
 }
 }
