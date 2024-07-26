@@ -21,6 +21,6 @@ function SearchDatabase()
    this[database_length++] = new SearchPage("404.html", "404", "Упсс! Вы попали на страницу 404!  Но можете здесь посмотреть флешку   ЧТОБЫ ФЛЕШ ЗАРАБОТАЛ СКАЧАЙТЕ  https //chromewebstore.google.com/detail/ruffle-flash-emulator/donbcfbmhbcapadipfkeojnmajbakjdc?hl=ru  На главную   ", "");
    this[database_length++] = new SearchPage("500.html", "500", "ОШИБКА 500  500 Internal Server Error   ", "");
    this[database_length++] = new SearchPage("405.html", "405", "Упсс! Вы попали на страницу 405!  Но можете здесь посмотреть флешку   ЧТОБЫ ФЛЕШ ЗАРАБОТАЛ СКАЧАЙТЕ  https //chromewebstore.google.com/detail/ruffle-flash-emulator/donbcfbmhbcapadipfkeojnmajbakjdc?hl=ru   ", "");
-   this[database_length++] = new SearchPage("OldSites.htm", "HTM или HTML сайты которые у меня есть на каком-то диске", "HTM или HTML сайты которые у меня есть на каком-то диске  boygirlsms.htm   ", "");
+   this[database_length++] = new SearchPage("OldSites.htm", "HTM или HTML сайты которые у меня есть на каком-то диске", "HTM или HTML сайты которые у меня есть на каком-то диске  boygirlsms.htm  http //stars.net.ua/ https //web.archive.org/web/20060612200034/http //stars.net.ua/   ", "");
    return this;
 }
