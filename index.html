@@ -3,13 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>BogdanSite2014</title>
-<meta name="generator" content="WYSIWYG Web Builder 19 Trial Version - https://www.wysiwygwebbuilder.com">
 <link href="icon.png" rel="icon" sizes="16x16" type="image/png">
 <link href="ergferg.css" rel="stylesheet">
 <link href="index.css" rel="stylesheet">
 <script src="jquery-3.7.1.min.js"></script>
 <script src="skrollr.min.js"></script>
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script>
 $(document).ready(function()
 {
@@ -102,8 +100,8 @@ document.write("<div style=\"color:#FFFFFF;font-size:16px;font-family:Comic Sans
 <a href="mailto: bogdannn55rus@gmail.com"><img src="images/thundermail.gif" id="Image6" alt="" width="330" height="32"></a></div>
 <div id="wb_Text13" style="position:absolute;left:844px;top:502px;width:174px;height:56px;z-index:39;">
 <span style="color:#FFFFFF;font-family:'Comic Sans MS';font-size:13px;">Если вы хотите со мной<br>связаться быстро то нажмите на эту кнопку</span></div>
-<div id="wb_TextArt1" style="position:absolute;left:829px;top:47px;width:365px;height:83px;z-index:40;">
-<img src="images/img0003.png" id="TextArt1" alt="ДОБРО ПОЖАЛОВАТЬ!" title="ДОБРО ПОЖАЛОВАТЬ!" width="365" height="83" style="width:365px;height:83px;"></div>
+<div id="wb_TextArt1" style="position:absolute;left:829px;top:47px;width:365px;height:63px;z-index:40;">
+<img src="images/img0003.png" id="TextArt1" alt="ДОБРО ПОЖАЛОВАТЬ!" title="ДОБРО ПОЖАЛОВАТЬ!" width="365" height="63" style="width:365px;height:63px;"></div>
 <div id="wb_Image7" style="position:absolute;left:999px;top:557px;width:60px;height:70px;z-index:41;">
 <a href="https://www.donationalerts.com/r/sobkin228"><img src="images/dollarspindownd.gif" id="Image7" alt="" width="60" height="70"></a></div>
 <div id="Html6" style="position:absolute;left:902px;top:788px;width:87px;height:28px;z-index:42">
@@ -169,7 +167,7 @@ _tmr.push({id: "3536834", type: "pageView", start: (new Date()).getTime()});
 </div>
 <div id="wb_Image8" style="position:absolute;left:208px;top:908px;width:28px;height:26px;z-index:50;">
 <a href="http://sobka228.github.io/theme.mid"><img src="images/soundicon.gif" id="Image8" alt="" width="28" height="27"></a></div>
-<a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb19.png" alt="WYSIWYG Web Builder" style="position:absolute;left:1093px;top:901px;margin: 0;border-width:0;z-index:250" width="88" height="31"></a>
+
 <div id="wb_Text15" style="position:absolute;left:209px;top:460px;width:241px;height:59px;z-index:52;">
 <span style="color:#000000;font-family:'Comic Sans MS';font-size:21px;"><a href="./OldSites.htm">[HTM сайты которые на моем диске]</a></span></div>
 <div id="wb_Text16" style="position:absolute;left:240px;top:823px;width:143px;height:37px;z-index:53;">
@@ -177,60 +175,6 @@ _tmr.push({id: "3536834", type: "pageView", start: (new Date()).getTime()});
 <div id="wb_Text17" style="position:absolute;left:227px;top:871px;width:169px;height:20px;z-index:54;">
 <span style="color:#000000;font-family:'Comic Sans MS';font-size:15px;"><a href="./list.html">[Хотите еще страниц?]</a></span></div>
 <div style="z-index:55">
-<div id="infobar" style="padding:4px 4px 4px 4px;position:fixed;z-index:999;left:0px;top:-100px;width:100%;border-bottom:1px solid #000000;background-color:#0000CD">
-<a href="javascript:closeInfoBar()"><img src="icon_close.gif" style="width: 14px; height: 14px; float: right; border: 0; margin-right: 5px" /></a>
-<span style="color:#FFFFFF;font-size:16px;font-family:Comic Sans MS;font-weight:normal;font-style:normal;text-decoration:none;padding:0px 0;">КАК ГОВОРИТ СОБКА ЭТОТ САЙТ ЕЩЕ В РАЗРАБАТЫВАЕТСЯ!</span>
-</div>
-<script>
-function showInfoBar()
-{
-   var infobar = document.getElementById("infobar");
-   var top = parseInt(infobar.style.top);
-   if (top < 0)
-   {
-      top += 5;
-      infobar.style.top = top+"px";
-      setTimeout(function(){showInfoBar()}, 50);
-   }
-   else
-   {
-      if (document.all && !window.XMLHttpRequest)
-         infobar.style.setExpression("top", 'document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px" : body.scrollTop+"px"');
-      else
-         infobar.style.top = 0;
-   }
-}
-function closeInfoBar()
-{
-   document.getElementById("infobar").style.display = "none";
-}
-function initInfoBar()
-{
-   var docWidth = 800;
-
-   if (typeof window.innerWidth != 'undefined')
-   {
-      docWidth = window.innerWidth;
-   }
-   else 
-   if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0)
-   {
-      docWidth = document.documentElement.clientWidth;
-   }
-   else
-   {
-      docWidth = document.getElementsByTagName('body')[0].clientWidth;
-   }
-  // document.getElementById("infobar").style.width = "100%";
-
-   var height = parseInt(document.getElementById("infobar").offsetHeight);
-   document.getElementById("infobar").style.top = height*(-1)+"px";
-   
-   showInfoBar();
-}
-initInfoBar();
-</script></div>
-<div style="z-index:56">
 <script>
 var disabled_message = "";
 document.oncontextmenu = function() 
