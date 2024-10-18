@@ -38,15 +38,6 @@ a:hover
    color: #191970;
    text-decoration: underline;
 }
-#preloader
-{
-   background: #000000 url("images/rotating.gif") no-repeat center center;
-   bottom: 0;
-   position: fixed;
-   top: 0;
-   width: 100%;
-   z-index: 99999;
-}
 #wb_Image12
 {
    vertical-align: top;
