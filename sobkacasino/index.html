@@ -73,9 +73,34 @@
             margin-top: 20px;
             font-size: 18px;
         }
+        
+        /* НОВОЕ: Стили для кнопки пополнения */
+        #topUpButton {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #27ae60;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        #topUpButton:disabled {
+            background-color: #7f8c8d;
+            cursor: not-allowed;
+        }
+        /* КОНЕЦ НОВОГО */
+
     </style>
 </head>
 <body>
+
+<button id="topUpButton">пополнить баланс</button>
 
 <div class="casino">
     <h1>СОБКА КАЗИНО</h1>
@@ -119,9 +144,14 @@
         const spinButton = document.getElementById('spinButton');
         const message = document.getElementById('message');
         const balanceDisplay = document.getElementById('balance');
-        // Получаем аудио элементы
         const spinSound = document.getElementById('spinSound');
         const winSound = document.getElementById('winSound');
+
+        // НОВОЕ: Получаем кнопку пополнения и создаем счетчик нажатий
+        const topUpButton = document.getElementById('topUpButton');
+        let topUpCount = 0;
+        const maxTopUps = 3;
+        // КОНЕЦ НОВОГО
 
         let balance = 100;
         const spinCost = 10;
@@ -145,7 +175,6 @@
                 return;
             }
             
-            // Воспроизводим звук вращения
             spinSound.currentTime = 0;
             spinSound.play();
 
@@ -184,7 +213,6 @@
             const winAmount = winCombinations[resultString];
 
             if (winAmount) {
-                // Воспроизводим звук выигрыша
                 winSound.currentTime = 0;
                 winSound.play();
                 message.textContent = `Выигрыш! +${winAmount} копеек`;
@@ -193,7 +221,12 @@
                 message.textContent = 'Попробуйте еще раз!';
             }
             updateBalance();
-            spinButton.disabled = false;
+            
+            if (balance >= spinCost) {
+                 spinButton.disabled = false;
+            } else {
+                message.textContent = 'Недостаточно средств!';
+            }
         }
 
         function updateBalance() {
@@ -201,6 +234,27 @@
         }
 
         spinButton.addEventListener('click', spin);
+
+        // НОВОЕ: Логика для кнопки пополнения
+        topUpButton.addEventListener('click', () => {
+            if (topUpCount < maxTopUps) {
+                balance += 50; // Пополняем на 50 копеек
+                topUpCount++; // Увеличиваем счетчик нажатий
+                updateBalance(); // Обновляем отображение баланса
+                
+                // Если баланс стал достаточным для ставки, снова включаем кнопку "Крутить"
+                if (balance >= spinCost && spinButton.disabled) {
+                    spinButton.disabled = false;
+                    message.textContent = "Баланс пополнен!";
+                }
+
+                // Если достигнут лимит нажатий, отключаем кнопку
+                if (topUpCount >= maxTopUps) {
+                    topUpButton.disabled = true;
+                }
+            }
+        });
+        // КОНЕЦ НОВОГО
     });
 </script>
 
