@@ -311,7 +311,7 @@
             const minBet = parseInt(betInput.min, 10);
 
             if (isNaN(currentBet) || currentBet < minBet) {
-                showMessage(`Ставка не может быть меньше ${minBet}!`, 'error');
+                showMessage(`Ле блядь ставка не может быть меньше ${minBet}`, 'error');
                 return;
             }
 
@@ -367,10 +367,10 @@
                 const winAmount = currentBet * winMultiplier;
                 winSound.currentTime = 0;
                 winSound.play();
-                showMessage(`ДЖЕКПОТ! +${winAmount} 🪙`, 'win');
+                showMessage(`ДЖЕКПОТ! +${winAmount} копеек`, 'win');
                 balance += winAmount;
             } else if (results[0] === results[1] || results[1] === results[2]) {
-                showMessage(`Комбинация! Ставка возвращена (+${currentBet} 🪙)`, 'win');
+                showMessage(`Комбинация! Ставка возвращена (+${currentBet} копеек)`, 'win');
                 balance += currentBet;
             } else {
                 showMessage('Попробуйте еще раз!', 'info');
