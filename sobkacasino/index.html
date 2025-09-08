@@ -217,6 +217,46 @@
             color: #576574;
             cursor: not-allowed;
         }
+
+        /* НОВЫЙ БЛОК: Стили для промокодов */
+        .promo-container {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+            margin-top: -10px; /* Уменьшим отступ, так как у topUpButton уже есть margin */
+        }
+
+        #promoInput {
+            flex-grow: 1;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 2px solid var(--secondary-bg);
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+        }
+        #promoInput::placeholder {
+            color: #7f8c8d;
+        }
+
+        #promoButton {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(145deg, var(--gold-color), #d4ac0d);
+            color: var(--primary-bg);
+            font-weight: bold;
+            transition: all 0.3s;
+            font-family: 'Poppins', sans-serif;
+        }
+        #promoButton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(241, 196, 15, 0.4);
+        }
+        /* КОНЕЦ НОВОГО БЛОКА */
     </style>
 </head>
 <body>
@@ -244,7 +284,12 @@
         </div>
         <button id="spinButton">Крутить</button>
         <button id="topUpButton">Пополнить (+100 копеек)</button>
-    </div>
+        
+        <div class="promo-container">
+            <input type="text" id="promoInput" placeholder="Введите промокод">
+            <button id="promoButton">Применить</button>
+        </div>
+        </div>
 </div>
 
 <audio id="spinSound" src="https://sobka228.github.io/sobkacasino/sounds/ak47-1.mp3"></audio>
@@ -272,6 +317,15 @@
             'grysha-grysha-grysha': 200,
             'shalava-shalava-shalava': 220
         };
+        
+        /* НОВЫЙ БЛОК: Список промокодов */
+        const promoCodes = {
+            'SOBKAWIN': { amount: 500, used: false },
+            'LOX_PETUH': { amount: 1000, used: false },
+            'SECRET': { amount: 9000000000000, used: false }
+        };
+        /* КОНЕЦ НОВОГО БЛОКА */
+
 
         const spinButton = document.getElementById('spinButton');
         const message = document.getElementById('message');
@@ -280,9 +334,14 @@
         const winSound = document.getElementById('winSound');
         const topUpButton = document.getElementById('topUpButton');
         const betInput = document.getElementById('betInput');
-        const slotsContainer = document.getElementById('slots-container'); // НОВОЕ
-        const decreaseBetBtn = document.getElementById('decreaseBet'); // НОВОЕ
-        const increaseBetBtn = document.getElementById('increaseBet'); // НОВОЕ
+        const slotsContainer = document.getElementById('slots-container');
+        const decreaseBetBtn = document.getElementById('decreaseBet');
+        const increaseBetBtn = document.getElementById('increaseBet');
+        
+        /* НОВЫЙ БЛОК: Получение элементов промокода */
+        const promoInput = document.getElementById('promoInput');
+        const promoButton = document.getElementById('promoButton');
+        /* КОНЕЦ НОВОГО БЛОКА */
 
         let topUpCount = 0;
         const maxTopUps = 3;
@@ -300,7 +359,6 @@
             return weightedSymbols[randomIndex];
         }
         
-        // НОВОЕ: Функция для установки типа сообщения (и его цвета)
         function showMessage(text, type) {
             message.textContent = text;
             message.className = type + '-message';
@@ -331,7 +389,7 @@
             betInput.disabled = true;
             decreaseBetBtn.disabled = true;
             increaseBetBtn.disabled = true;
-            slotsContainer.classList.add('spinning'); // НОВОЕ: Добавляем класс для анимации
+            slotsContainer.classList.add('spinning');
             showMessage('Крутим...', 'info');
 
             const slots = [document.getElementById('slot1'), document.getElementById('slot2'), document.getElementById('slot3')];
@@ -359,7 +417,7 @@
         }
 
         function checkWin(results, currentBet) {
-            slotsContainer.classList.remove('spinning'); // НОВОЕ: Убираем класс анимации
+            slotsContainer.classList.remove('spinning');
             const resultString = results.join('-');
             const winMultiplier = winCombinations[resultString];
 
@@ -383,7 +441,6 @@
             balanceDisplay.textContent = balance;
         }
         
-        // НОВОЕ: Отдельная функция для обновления состояния кнопок
         function updateControlsState() {
             const currentBet = parseInt(betInput.value, 10);
             spinButton.disabled = balance < currentBet || isNaN(currentBet);
@@ -392,9 +449,9 @@
             increaseBetBtn.disabled = false;
             
             if (balance < currentBet && balance > 0) {
-                 showMessage('Ле брад снизь ставку или копейку дэй нам', 'error');
+                showMessage('Ле брад снизь ставку или копейку дэй нам', 'error');
             } else if (balance <= 0) {
-                 showMessage('ВЫ БОМЖ.', 'error');
+                showMessage('ВЫ БОМЖ.', 'error');
             }
         }
 
@@ -415,7 +472,6 @@
             }
         });
         
-        // НОВОЕ: Обработчики для кнопок +/-
         increaseBetBtn.addEventListener('click', () => {
             const step = parseInt(betInput.step, 10);
             betInput.value = parseInt(betInput.value, 10) + step;
@@ -433,9 +489,34 @@
             updateControlsState();
         });
         
-        // НОВОЕ: Проверка состояния кнопок при изменении ставки вручную
         betInput.addEventListener('input', updateControlsState);
         
+        /* НОВЫЙ БЛОК: Логика для промокодов */
+        promoButton.addEventListener('click', () => {
+            const code = promoInput.value.toUpperCase().trim(); // Приводим к верхнему регистру и убираем пробелы
+
+            if (!code) {
+                showMessage('Сначала введите промокод!', 'error');
+                return;
+            }
+
+            const promo = promoCodes[code];
+
+            if (promo && !promo.used) {
+                balance += promo.amount;
+                promo.used = true; // Помечаем промокод как использованный
+                updateBalance();
+                showMessage(`Промокод "${code}" активирован! +${promo.amount} копеек`, 'win');
+                updateControlsState();
+            } else if (promo && promo.used) {
+                showMessage('Этот промокод уже был использован!', 'error');
+            } else {
+                showMessage('ты че выдумавать такого промо нету блядь ле', 'error');
+            }
+
+            promoInput.value = ''; // Очищаем поле ввода
+        });
+        /* КОНЕЦ НОВОГО БЛОКА */
     });
 </script>
 
