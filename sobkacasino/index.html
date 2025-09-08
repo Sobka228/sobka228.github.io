@@ -74,7 +74,6 @@
             font-size: 18px;
         }
         
-        /* НОВОЕ: Стили для кнопки пополнения */
         #topUpButton {
             position: absolute;
             top: 20px;
@@ -94,8 +93,6 @@
             background-color: #7f8c8d;
             cursor: not-allowed;
         }
-        /* КОНЕЦ НОВОГО */
-
     </style>
 </head>
 <body>
@@ -109,38 +106,39 @@
         <div class="slot" id="slot2"><img src="https://sobka228.github.io/sobkacasino/images/jopka.jpg" alt="?"></div>
         <div class="slot" id="slot3"><img src="https://sobka228.github.io/sobkacasino/images/jopka.jpg" alt="?"></div>
     </div>
-    <button id="spinButton">Крутить (ставка: 10 копеек)</button>
+    <button id="spinButton">Крутить (ставка: 50 копеек)</button>
     <div id="message"></div>
     <div class="balance-info">
-        Баланс: <span id="balance">100</span><span> копеек</span>
+        Баланс: <span id="balance">500</span><span> копеек</span>
     </div>
 </div>
 
 <audio id="spinSound" src="https://sobka228.github.io/sobkacasino/sounds/ak47-1.mp3"></audio>
 <audio id="winSound" src="https://sobka228.github.io/sobkacasino/sounds/fgoooooo.mp3"></audio>
+<audio id="comboSound" src="https://sobka228.github.io/sobkacasino/sounds/eye-of-rah-sound-effect.mp3"></audio>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const symbols = [
-            { name: 'stanok', img: 'https://sobka228.github.io/sobkacasino/images/pila.jpg', weight: 10 },
-            { name: 'pokakat', img: 'https://sobka228.github.io/sobkacasino/images/pokakat.jpg', weight: 8 },
-            { name: 'sopina', img: 'https://sobka228.github.io/sobkacasino/images/sopina.jpg', weight: 6 },
-            { name: 'gomyak', img: 'https://sobka228.github.io/sobkacasino/images/gomyak.jpg', weight: 4 },
-            { name: 'kiwi', img: 'https://sobka228.github.io/sobkacasino/images/kiwi.jpg', weight: 2 },
-            { name: 'grysha', img: 'https://sobka228.github.io/sobkacasino/images/grysha.jpg', weight: 1 },
+            { name: 'stanok', img: 'https://sobka228.github.io/sobkacasino/images/pila.jpg', weight: 3 },      
+            { name: 'pokakat', img: 'https://sobka228.github.io/sobkacasino/images/pokakat.jpg', weight: 5 },
+            { name: 'sopina', img: 'https://sobka228.github.io/sobkacasino/images/sopina.jpg', weight: 8 },
+            { name: 'gomyak', img: 'https://sobka228.github.io/sobkacasino/images/gomyak.jpg', weight: 10 },
+            { name: 'kiwi', img: 'https://sobka228.github.io/sobkacasino/images/kiwi.jpg', weight: 12 },
+            { name: 'grysha', img: 'https://sobka228.github.io/sobkacasino/images/grysha.jpg', weight: 15 },    
             { name: 'imba', img: 'https://sobka228.github.io/sobkacasino/images/imba.jpg', weight: 7 },
-            { name: 'shalava', img: 'https://sobka228.github.io/sobkacasino/images/shalava.jpg', weight: 3 }
+            { name: 'shalava', img: 'https://sobka228.github.io/sobkacasino/images/shalava.jpg', weight: 13 }    
         ];
 
         const winCombinations = {
-            'stanok-stanok-stanok': 20,
-            'pokakat-pokakat-pokakat': 50,
-            'sopina-sopina-sopina': 100,
-            'gomyak-gomyak-gomyak': 200,
-            'kiwi-kiwi-kiwi': 500,
-            'grysha-grysha-grysha': 900,
-            'grysha-grysha-grysha': 1000,
-            'shalava-shalava-shalava': 1100
+            'stanok-stanok-stanok': 200,    
+            'pokakat-pokakat-pokakat': 500,
+            'sopina-sopina-sopina': 1000,
+            'gomyak-gomyak-gomyak': 2000,
+            'kiwi-kiwi-kiwi': 5000,
+            'grysha-grysha-grysha': 10000,
+            'shalava-shalava-shalava': 11000
         };
         
         const spinButton = document.getElementById('spinButton');
@@ -148,15 +146,14 @@
         const balanceDisplay = document.getElementById('balance');
         const spinSound = document.getElementById('spinSound');
         const winSound = document.getElementById('winSound');
+        const comboSound = document.getElementById('comboSound'); // НОВОЕ: Получаем новый аудио элемент
 
-        // НОВОЕ: Получаем кнопку пополнения и создаем счетчик нажатий
         const topUpButton = document.getElementById('topUpButton');
         let topUpCount = 0;
         const maxTopUps = 3;
-        // КОНЕЦ НОВОГО
 
-        let balance = 100;
-        const spinCost = 10;
+        let balance = 500;
+        const spinCost = 50;
 
         const weightedSymbols = [];
         symbols.forEach(symbol => {
@@ -214,11 +211,17 @@
             const resultString = results.join('-');
             const winAmount = winCombinations[resultString];
 
-            if (winAmount) {
+            if (winAmount) { 
                 winSound.currentTime = 0;
                 winSound.play();
-                message.textContent = `Выигрыш! +${winAmount} копеек`;
+                message.textContent = `ДЖЕКПОТ! +${winAmount} копеек`;
                 balance += winAmount;
+            } else if (results[0] === results[1] || results[1] === results[2]) { 
+                 // НОВОЕ: Проигрываем звук для комбинации
+                 comboSound.currentTime = 0;
+                 comboSound.play();
+                 message.textContent = `Комбинация! +${spinCost} копеек`;
+                 balance += spinCost; 
             } else {
                 message.textContent = 'Попробуйте еще раз!';
             }
@@ -237,26 +240,22 @@
 
         spinButton.addEventListener('click', spin);
 
-        // НОВОЕ: Логика для кнопки пополнения
         topUpButton.addEventListener('click', () => {
             if (topUpCount < maxTopUps) {
-                balance += 50; // Пополняем на 50 копеек
-                topUpCount++; // Увеличиваем счетчик нажатий
-                updateBalance(); // Обновляем отображение баланса
+                balance += 50; 
+                topUpCount++; 
+                updateBalance();
                 
-                // Если баланс стал достаточным для ставки, снова включаем кнопку "Крутить"
                 if (balance >= spinCost && spinButton.disabled) {
                     spinButton.disabled = false;
                     message.textContent = "Баланс пополнен!";
                 }
 
-                // Если достигнут лимит нажатий, отключаем кнопку
                 if (topUpCount >= maxTopUps) {
                     topUpButton.disabled = true;
                 }
             }
         });
-        // КОНЕЦ НОВОГО
     });
 </script>
 
