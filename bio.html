@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Био — SOBKA</title>
+  <style>
+    body {
+      background: radial-gradient(circle at top, #141414, #000);
+      color: #fff8d6;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      text-shadow: 0 0 4px rgba(255, 255, 150, 0.3);
+    }
+
+    .card {
+      background: rgba(255, 255, 200, 0.05);
+      border: 1px solid rgba(255, 255, 150, 0.15);
+      border-radius: 20px;
+      padding: 30px 40px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 0 25px rgba(255, 255, 100, 0.2);
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 40px rgba(255, 255, 100, 0.5);
+      transform: scale(1.02);
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff76a;
+      text-shadow: 0 0 12px #fff76a, 0 0 24px #ffea00;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 150, 0.2);
+      margin: 15px 0;
+    }
+
+    a {
+      color: #fff76a;
+      text-decoration: none;
+      text-shadow: 0 0 6px #fff76a;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      text-shadow: 0 0 12px #ffff99, 0 0 20px #ffff33;
+    }
+
+    .section {
+      margin-bottom: 15px;
+    }
+
+    .small {
+      font-size: 0.85em;
+      color: #e0e0a0;
+      text-shadow: 0 0 6px rgba(255, 255, 150, 0.3);
+    }
+
+    .warning {
+      background: rgba(255, 230, 100, 0.1);
+      border-left: 4px solid #fff76a;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fffbc7;
+      font-weight: bold;
+      text-shadow: 0 0 10px #fff76a;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Добро пожаловать в мое био!!11!1!1!1111</h1>
+    <hr>
+    <div class="section">
+      <b>Имя:</b> Богдан<br>
+      <b>Днюха:</b> 10 Февраля<br>
+      <b>Город:</b> Омск (UTC +6)<br>
+      <span class="small" id="timeDisplay">Загрузка времени...</span><br>
+      <b>Блог:</b> <a href="https://sobkeblog.ct.ws">sobkeblog.ct.ws</a>
+    </div>
+    <hr>
+    <div class="section">
+      <b>Девайсы:</b> <a href="https://docs.google.com/spreadsheets/d/1re18lgOw-B1kSRK3qtSWA9-rphJDhK4-_BkQ90t6MYs/edit?usp=sharing">клик</a>
+    </div>
+    <hr>
+    <div class="section">
+      <b>Каналы и чаты в тг:</b><br>
+      Личный блог: <a href="https://t.me/SOBKA_TVs">@SOBKA_TVs</a><br>
+      Щитпост канал: <a href="https://t.me/SOBKA_TV">@SOBKA_TV</a><br>
+      Основной чат: <a href="https://t.me/ChatSobki">@ChatSobki</a>
+    </div>
+    <hr>
+    <div class="section">
+      <b>Связь / Социалки:</b><br>
+      Discord: sobka_sus<br>
+      Discord Сообщество: <a href="https://discord.gg/6K3VM7CG8j">discord.gg/6K3VM7CG8j</a><br>
+      TikTok: <a href="https://www.tiktok.com/@sobka.tv">@sobka.tv</a><br>
+      GitHub: <a href="https://github.com/Sobka228">Sobka228</a><br>
+      ТГ: <a href="https://t.me/SOBKA_SUS">@SOBKA_SUS</a><br>
+      Steam: <a href="http://steamcommunity.com/id/sobka_sus/">steamcommunity.com/id/sobka_sus/</a><br>
+      <small>(Код дружбы: 1749691245)</small>
+    </div>
+    <hr>
+    <div class="section">
+      <b>Задонатить (хз зачем):</b><br>
+      DonationAlerts: <a href="https://www.donationalerts.com/r/sobkasus">donationalerts.com/r/sobkasus</a><br>
+      T-Bank: <a href="https://www.tinkoff.ru/rm/r_xbefTCaZQr.JlLucqdFwd/myaXd83222">tinkoff.ru/.../myaXd83222</a>
+    </div>
+    <hr>
+  </div>
+
+  <script>
+    function updateTime() {
+      const userNow = new Date();
+      const utcNow = userNow.getTime() + (userNow.getTimezoneOffset() * 60000);
+      const omskNow = new Date(utcNow + 6 * 3600000);
+
+      const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const userTime = userNow.toLocaleTimeString([], options);
+      const omskTime = omskNow.toLocaleTimeString([], options);
+
+      document.getElementById('timeDisplay').innerHTML =
+        `Ваше время: ${userTime} &nbsp;|&nbsp; Мое время: ${omskTime}`;
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+</html>
+
