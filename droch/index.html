@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>расчет дрочки</title>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .box {
+      background: #1c1c1c;
+      padding: 20px;
+      border-radius: 12px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    h1 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    input[type="file"] {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .preview {
+      width: 100%;
+      height: 180px;
+      border: 2px dashed #444;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    button {
+      background: #ff0066;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff3388;
+    }
+
+    .result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .bad {
+      color: #ff3333;
+    }
+
+    .good {
+      color: #33ff66;
+    }
+
+    .gif {
+      margin-top: 10px;
+      display: none;
+    }
+
+    .gif img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>РАСЧЕТ ДРОЧКИ</h1>
+
+  <input type="file" accept="image/*" id="fileInput">
+
+  <div class="preview" id="preview">
+    <span>вставь сюда картинку и я тибе расчетаю</span>
+  </div>
+
+  <button onclick="calculate()">РАСЧЁТ!</button>
+
+  <div class="result" id="result"></div>
+
+  <div class="gif" id="gif">
+    <img id="gifImg" src="">
+  </div>
+</div>
+
+<script>
+  const fileInput = document.getElementById("fileInput");
+  const preview = document.getElementById("preview");
+  const result = document.getElementById("result");
+  const gif = document.getElementById("gif");
+  const gifImg = document.getElementById("gifImg");
+
+  let lastFileSignature = null;
+  let alreadyCalculated = false;
+
+  fileInput.addEventListener("change", () => {
+    const file = fileInput.files[0];
+    if (!file) return;
+
+    // сигнатура файла (чтобы понимать — тот же или нет)
+    lastFileSignature = file.name + file.size + file.lastModified;
+    alreadyCalculated = false;
+
+    const img = document.createElement("img");
+    img.src = URL.createObjectURL(file);
+
+    preview.innerHTML = "";
+    preview.appendChild(img);
+
+    // сброс результата и гифки при новой картинке
+    result.textContent = "";
+    gif.style.display = "none";
+  });
+
+  function calculate() {
+    const file = fileInput.files[0];
+
+    if (!file) {
+      result.textContent = "вставь картинку";
+      result.className = "result bad";
+      gif.style.display = "none";
+      return;
+    }
+
+    if (alreadyCalculated) {
+      result.textContent = "Я УЖЕ ЭТО РАССЧЕТАЛ, СЛЕДУЩИЙ";
+      result.className = "result bad";
+      gif.style.display = "none";
+      return;
+    }
+
+    alreadyCalculated = true;
+
+    // рофло-анализ
+    const ok = Math.random() > 0.5;
+
+    if (ok) {
+      result.textContent = "СОГЛАСНО МОИМ РАССЧЕТАМ, НА ЭТО МОЖНО ПОДРОЧИТЬ";
+      result.className = "result good";
+      gifImg.src = "droch.gif";
+      gif.style.display = "block";
+    } else {
+      result.textContent = "фу говно ебанное недрочибельное";
+      result.className = "result bad";
+      gif.style.display = "none";
+    }
+  }
+</script>
+
+
+</body>
+</html>
